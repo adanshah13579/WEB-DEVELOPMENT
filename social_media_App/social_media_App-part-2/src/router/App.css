@@ -1,0 +1,48 @@
+
+
+.a{
+display: flex;
+
+
+}
+.b{
+width: 100%;
+
+}
+
+.sb{
+
+  min-height: 900px;
+  
+}
+.sbb{
+
+  margin-top: 15px;
+  width: 70px;
+  height: 40px;
+}
+.postcard{
+
+margin: 20px 50px;
+
+
+}
+.hashtag{
+
+margin: 0px 3px;
+}
+.reaction{
+
+  
+  margin: 15px 0 0 0 ;
+}
+.creatpost{
+
+  width: 80%;
+  margin-top: 50px;
+  margin-left: 10%;
+}
+.wel{
+
+  padding: 200px;
+}
