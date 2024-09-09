@@ -1,0 +1,256 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Default width */
+  height: 100%;
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+/* Sidebar logo */
+.sidebar-logo {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Sidebar item */
+.sidebar-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 2rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #84a3c2;
+  border-radius: 0.5rem;
+}
+
+.sidebar-item .icon {
+  margin-right: 1rem;
+}
+
+.sidebar-item .notification-button {
+  position: relative;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+  }
+  .sidebar-item {
+    font-size: 0.875rem;
+  }
+}
+
+/* for main section */
+/* Post container */
+.post-container {
+  margin: 2rem auto;
+  max-width: 600px; /* Adjusted for larger screens */
+  width: 80%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Post image */
+.post-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Post header */
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Post header user info */
+.post-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post-user-info h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.post-user-info .badge {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+/* Post actions */
+.post-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.post-actions .icon {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.post-actions .icon:hover {
+  color: #333;
+}
+
+.post-actions .bookmark {
+  color: #333;
+}
+
+/* Post details */
+.post-details {
+  padding: 1rem;
+  color: #333;
+}
+
+.post-details .likes {
+  font-weight: 600;
+}
+
+.post-details .comments-link {
+  color: #3badf8;
+  cursor: pointer;
+}
+
+/* Comment input */
+.comment-input-container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.comment-input-container input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.comment-input-container .post-button {
+  color: #3badf8;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .post-container {
+    margin: 1rem;
+  }
+  
+  .post-header h1 {
+    font-size: 0.875rem;
+  }
+  
+  .post-actions .icon {
+    font-size: 20px;
+  }
+}
+
+/* //right side bar  */
+
+/* Right sidebar container */
+/* Right sidebar container */
+/* Right sidebar container */
+.right-sidebar {
+  width: 400px; /* Increased width */
+  max-height: 100vh;
+  position: fixed; /* Fix the sidebar in position while scrolling */
+  right: 0;
+  top: 0;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for better separation */
+  border-left: 1px solid #ddd; /* Slight border to separate from content */
+  overflow-y: auto; /* Allows scrolling if the content exceeds viewport height */
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px; /* Add padding for spacing */
+  border-bottom: 1px solid #ddd; /* Separator line between user profile and suggested users */
+  margin-bottom: 16px; /* Margin to separate from the rest of the content */
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.suggested-users {
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+.user-profile h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.user-profile span {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .right-sidebar {
+    width: 100%; /* Responsive width for smaller screens */
+    position: relative; /* Changes to static positioning on smaller screens */
+    border-left: none;
+  }
+}
